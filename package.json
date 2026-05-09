@@ -1,0 +1,23 @@
+{
+  "name": "bodega-web-project",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/spacem4n22/bodega-web-project#readme",
+  "bugs": {
+    "url": "https://github.com/spacem4n22/bodega-web-project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spacem4n22/bodega-web-project.git"
+  },
+  "license": "ISC",
+  "author": "Israel de la rosa, Francisco Crespo",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
