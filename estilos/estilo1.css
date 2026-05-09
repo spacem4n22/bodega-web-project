@@ -11,7 +11,7 @@ body {
         linear-gradient(rgba(0, 0, 0, 0.65),
             rgba(0, 0, 0, 0.65)),
 
-        url('/imagenes/bodega.jpg');
+        url('imagenes/bodega.jpg');
 
     background-size: cover;
     background-position: center;
