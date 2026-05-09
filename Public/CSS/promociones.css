@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#f5f1ea;
+    color:#2b2b2b;
+    padding-top:90px;
+}
+
+/* CONTENEDOR */
+
+.main-container{
+    width:95%;
+    margin:20px auto;
+    overflow:hidden;
+    border-radius:35px;
+}
+
+/* NAVBAR */
+
+.custom-navbar{
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(10px);
+    padding:16px 0;
+    border-bottom:1px solid rgba(0,0,0,0.08);
+    z-index:1000;
+}
+
+.logo-text{
+    font-size:1.7rem;
+    font-weight:800;
+    color:#2b2b2b;
+}
+
+.navbar-nav .nav-link{
+    color:#2b2b2b;
+    font-weight:600;
+    margin:0 14px;
+    transition:0.3s;
+}
+
+.navbar-nav .nav-link:hover{
+    color:#2f7d57;
+}
+
+.active-link{
+    color:#2f7d57 !important;
+}
+
+/* HERO */
+
+.promo-hero{
+    padding:90px 0 50px;
+    text-align:center;
+}
+
+.promo-title{
+    font-size:4rem;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.promo-text{
+    color:#666;
+    font-size:1.1rem;
+}
+
+/* PROMOS */
+
+.promo-section{
+    padding-bottom:80px;
+}
+
+.promo-card{
+    border-radius:35px;
+    padding:40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    overflow:hidden;
+    height:100%;
+    transition:0.3s;
+}
+
+.promo-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+/* COLORES */
+
+.green-card{
+    background:#dff3e6;
+}
+
+.orange-card{
+    background:#f7dfc8;
+}
+
+.blue-card{
+    background:#dcecff;
+}
+
+.pink-card{
+    background:#f6dcec;
+}
+
+/* CONTENIDO */
+
+.promo-content{
+    max-width:55%;
+}
+
+.promo-badge{
+    display:inline-block;
+    background:white;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:0.9rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.promo-content h3{
+    font-size:2rem;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.promo-content p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+/* BOTON */
+
+.promo-btn{
+    display:inline-block;
+    background:#2f7d57;
+    color:white;
+    padding:14px 26px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.promo-btn:hover{
+    background:#245f42;
+    color:white;
+}
+
+/* IMAGEN */
+
+.promo-image{
+    width:220px;
+    object-fit:contain;
+}
+
+/* FOOTER */
+
+.footer-section{
+    padding:40px 0;
+    background:#ebe3d7;
+    text-align:center;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    color:#555;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .promo-title{
+        font-size:3rem;
+    }
+
+    .promo-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .promo-content{
+        max-width:100%;
+    }
+
+    .promo-image{
+        margin-top:30px;
+    }
+}
+
+@media(max-width:768px){
+
+    .promo-title{
+        font-size:2.2rem;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        gap:10px;
+    }
+}
