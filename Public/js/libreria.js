@@ -1,36 +1,50 @@
-fetch("/api/servicios")
-    .then(res => res.json())
-    .then(data => {
+fetch("/api/categorias")
 
-        let html = '';
+.then(res => res.json())
 
-        data.forEach(servicio => {
+.then(data => {
 
-            html += `
+    let html = '';
+
+    data.forEach(categoria => {
+
+        const categoriaId =
+            categoria.nombre
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
+        html += `
         
         <div class="col-6 col-md-3">
 
-            <div class="category-card">
+            <a
+                href="productos.html#${categoriaId}"
+                class="category-link"
+            >
 
-                <img 
-                    src="${servicio.imagen}" 
-                    alt="${servicio.nombre}" 
-                    class="category-image"
-                >
+                <div class="category-card ${categoria.clase}">
 
-                <h5 class="category-title">
-                    ${servicio.nombre}
-                </h5>
+                    <img 
+                        src="${categoria.imagen}" 
+                        alt="${categoria.nombre}" 
+                        class="category-image"
+                    >
 
-            </div>
+                    <h5 class="category-title">
+                        ${categoria.nombre}
+                    </h5>
+
+                </div>
+
+            </a>
 
         </div>
-
         `;
+    });
 
-        });
+    document.getElementById("servicios").innerHTML = html;
 
-        document.getElementById("servicios").innerHTML = html;
+})
 
-    })
-    .catch(error => console.log(error));
+.catch(error => console.log(error));

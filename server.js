@@ -8,6 +8,8 @@ app.use(express.static('Public'));
 
 const serviciosFile = "./data/servicios.json";
 const usuariosFile = "./data/usuarios.json";
+const categoriasFile = "./data/categorias.json";
+const productosFile = "./data/productos.json";
 
 function leer(ruta) {
     return JSON.parse(fs.readFileSync(ruta, 'utf-8'));
@@ -28,3 +30,11 @@ app.listen(3000, () => {
 app.get("/api/servicios", (req, res) => {
     res.json(leer(serviciosFile))
 })
+
+app.get("/api/categorias", (req, res) => {
+    res.json(leer(categoriasFile));
+});
+
+app.get("/api/productos", (req, res) => {
+    res.json(leer(productosFile));
+});

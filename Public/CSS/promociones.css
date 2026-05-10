@@ -27,7 +27,7 @@ body{
 .custom-navbar{
     background:rgba(255,255,255,0.75);
     backdrop-filter:blur(10px);
-    padding:160px 0;
+    padding:16px 0;
     border-bottom:1px solid rgba(0,0,0,0.08);
     z-index:1000;
 }
@@ -36,6 +36,7 @@ body{
     font-size:1.7rem;
     font-weight:800;
     color:#2b2b2b;
+    letter-spacing:1px;
 }
 
 .navbar-nav .nav-link{
@@ -51,6 +52,44 @@ body{
 
 .active-link{
     color:#2f7d57 !important;
+}
+
+/* BOTONES NAVBAR */
+
+.nav-buttons{
+    display:flex;
+    gap:14px;
+}
+
+.consult-btn{
+    background:#2f7d57;
+    color:white;
+    border-radius:30px;
+    padding:8px 18px;
+    font-size:0.9rem;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.consult-btn:hover{
+    background:#245f42;
+    color:white;
+}
+
+.admin-btn{
+    background:transparent;
+    border:1.5px solid #2f7d57;
+    color:#2f7d57;
+    border-radius:30px;
+    padding:8px 18px;
+    font-size:0.9rem;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.admin-btn:hover{
+    background:#2f7d57;
+    color:white;
 }
 
 /* HERO */

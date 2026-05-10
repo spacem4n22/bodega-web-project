@@ -1,0 +1,177 @@
+[
+  {
+    "id":1,
+    "nombre":"Gaseosa Coca Cola Botella 3 L",
+    "categoria":"Gaseosas",
+    "precio":"S/ 12.50",
+    "imagen":"../imagenes/cocacola3.webp"
+  },
+
+  {
+    "id":2,
+    "nombre":"Gaseosa Inca Kola Botella 1.5 L",
+    "categoria":"Gaseosas",
+    "precio":"S/ 7.50",
+    "imagen":"../imagenes/incakola1-5.webp"
+  },
+
+  {
+    "id":3,
+    "nombre":"Gaseosa Guaraná Botella 2 L",
+    "categoria":"Gaseosas",
+    "precio":"S/ 6.50",
+    "imagen":"../imagenes/guarana2.webp"
+  },
+
+  {
+    "id":4,
+    "nombre":"Gaseosa Sprite Zero Botella 500 mL",
+    "categoria":"Gaseosas",
+    "precio":"S/ 2.70",
+    "imagen":"../imagenes/sprite500.webp"
+  },
+
+  {
+    "id":5,
+    "nombre":"Papas Fritas Lays Clásicas Sal Bolsa 140 g",
+    "categoria":"Snacks",
+    "precio":"S/ 5.50",
+    "imagen":"../imagenes/lays140.webp"
+  },
+
+  {
+    "id":6,
+    "nombre":"Tortilla Chips Doritos Queso Atrevido Bolsa 190 g",
+    "categoria":"Snacks",
+    "precio":"S/ 7.90",
+    "imagen":"../imagenes/doritos190.webp"
+  },
+
+  {
+    "id":7,
+    "nombre":"Papas Pringles Original Envase 104 g",
+    "categoria":"Snacks",
+    "precio":"S/ 8.50",
+    "imagen":"../imagenes/pringles104.webp"
+  },
+
+  {
+    "id":8,
+    "nombre":"Snack Cuates Picante Bolsa 100 g",
+    "categoria":"Snacks",
+    "precio":"S/ 3.30",
+    "imagen":"../imagenes/cuates100.webp"
+  },
+
+  {
+    "id":9,
+    "nombre":"Leche Gloria Entera Lata 390g",
+    "categoria":"Lácteos",
+    "precio":"S/ 4.20",
+    "imagen":"../imagenes/gloria390.webp"
+  },
+
+  {
+    "id":10,
+    "nombre":"Yogurt Bebible Gloria Fresa Botella 946g",
+    "categoria":"Lácteos",
+    "precio":"S/ 6.20",
+    "imagen":"../imagenes/yogurt946.webp"
+  },
+
+  {
+    "id":11,
+    "nombre":"Mantequilla LAIVE con Sal Pote 180g",
+    "categoria":"Lácteos",
+    "precio":"S/ 13.30",
+    "imagen":"../imagenes/mantequilla180.webp"
+  },
+
+  {
+    "id":12,
+    "nombre":"Detergente Marsella Lavanda y Rosas Bolsa 320g",
+    "categoria":"Limpieza",
+    "precio":"S/ 4.10",
+    "imagen":"../imagenes/marsella320.webp"
+  },
+
+  {
+    "id":13,
+    "nombre":"Lejía Sapolio Original Botella 770g",
+    "categoria":"Limpieza",
+    "precio":"S/ 2.00",
+    "imagen":"../imagenes/lejia770.webp"
+  },
+
+  {
+    "id":14,
+    "nombre":"Arroz Extra Costeño Bolsa 750g",
+    "categoria":"Abarrotes",
+    "precio":"S/ 2.00",
+    "imagen":"../imagenes/arroz750.webp"
+  },
+
+  {
+    "id":15,
+    "nombre":"Fideos Spaghetti Molitalia Bolsa 950g",
+    "categoria":"Abarrotes",
+    "precio":"S/ 4.80",
+    "imagen":"../imagenes/fideos950.webp"
+  },
+
+  {
+    "id":16,
+    "nombre":"Azúcar Rubia Dulfina Bolsa 1Kg",
+    "categoria":"Abarrotes",
+    "precio":"S/ 4.80",
+    "imagen":"../imagenes/azucar1.webp"
+  },
+
+  {
+    "id":17,
+    "nombre":"Trozos de Atún Florida Aceite Vegetal Lata 140 g",
+    "categoria":"Conservas",
+    "precio":"S/ 5.80",
+    "imagen":"../imagenes/florida140.webp"
+  },
+
+  {
+    "id":18,
+    "nombre":"Filete de Atún Primor Lata 140 g",
+    "categoria":"Conservas",
+    "precio":"S/ 5.70",
+    "imagen":"../imagenes/primor140.webp"
+  },
+
+  {
+    "id":19,
+    "nombre":"Filete de Atún Campomar en Aceite Lata 150 g",
+    "categoria":"Conservas",
+    "precio":"S/ 5.00",
+    "imagen":"../imagenes/campomar150.jfif"
+  },
+
+  {
+    "id":20,
+    "nombre":"Fourloko Green lata 473 ml",
+    "categoria":"Licores",
+    "precio":"S/ 10.00",
+    "imagen":"../imagenes/fourloko473.webp"
+  },
+
+  {
+    "id":21,
+    "nombre":"Cerveza Pilsen Lata 473ml Paquete 6un",
+    "categoria":"Licores",
+    "precio":"S/ 29.50",
+    "imagen":"../imagenes/pilsen473.webp"
+  },
+
+  {
+    "id":22,
+    "nombre":"Whisky JOHNNIE WALKER Red Label Botella 1L",
+    "categoria":"Licores",
+    "precio":"S/ 64.90",
+    "imagen":"../imagenes/johnniewalker1.webp"
+  }
+]
