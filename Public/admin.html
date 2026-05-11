@@ -5,15 +5,29 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Panel Administrador</title>
 
+    <!-- Tipografía -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Estilos -->
 
     <link rel="stylesheet" href="CSS/admin.css">
 
@@ -23,7 +37,8 @@
 
     <div class="admin-container">
 
-        <!-- SIDEBAR -->
+        <!-- Menú lateral -->
+
         <aside class="sidebar">
 
             <h2 class="logo">
@@ -60,10 +75,12 @@
 
         </aside>
 
-        <!-- CONTENIDO -->
+        <!-- Contenido -->
+
         <main class="dashboard-content">
 
-            <!-- HEADER -->
+            <!-- Encabezado -->
+
             <header class="dashboard-header">
 
                 <div>
@@ -80,14 +97,16 @@
 
             </header>
 
-            <!-- ESTADISTICAS -->
-            <section class="stats-section" id="estadisticas-section">
+            <!-- Estadísticas -->
+
+            <section
+                class="stats-section"
+                id="estadisticas-section"
+            >
 
                 <div class="stat-card">
 
-                    <h3>
-                        22
-                    </h3>
+                    <h3>22</h3>
 
                     <p>
                         Productos registrados
@@ -97,9 +116,7 @@
 
                 <div class="stat-card">
 
-                    <h3>
-                        8
-                    </h3>
+                    <h3>8</h3>
 
                     <p>
                         Categorías activas
@@ -109,9 +126,7 @@
 
                 <div class="stat-card">
 
-                    <h3>
-                        14
-                    </h3>
+                    <h3>14</h3>
 
                     <p>
                         Consultas recibidas
@@ -121,14 +136,21 @@
 
             </section>
 
-            <!-- AGREGAR PRODUCTO -->
-            <section class="dashboard-card" id="productos-section">
+            <!-- Productos -->
+
+            <section
+                class="dashboard-card"
+                id="productos-section"
+            >
 
                 <h2>
                     Agregar Producto
                 </h2>
 
-                <form id="productoForm" class="product-form">
+                <form
+                    id="productoForm"
+                    class="product-form"
+                >
 
                     <input
                         type="text"
@@ -137,7 +159,10 @@
                         required
                     >
 
-                    <select id="categoriaProducto" required>
+                    <select
+                        id="categoriaProducto"
+                        required
+                    >
 
                         <option value="">
                             Selecciona categoría
@@ -197,13 +222,19 @@
 
                 </form>
 
-                <div id="productosAgregados" class="productos-lista">
-                </div>
+                <div
+                    id="productosAgregados"
+                    class="productos-lista"
+                ></div>
 
             </section>
 
-            <!-- CONSULTAS -->
-            <section class="dashboard-card" id="consultas-section">
+            <!-- Consultas -->
+
+            <section
+                class="dashboard-card"
+                id="consultas-section"
+            >
 
                 <div class="section-header">
 
@@ -225,21 +256,13 @@
 
                             <tr>
 
-                                <th>
-                                    Cliente
-                                </th>
+                                <th>Cliente</th>
 
-                                <th>
-                                    Celular
-                                </th>
+                                <th>Celular</th>
 
-                                <th>
-                                    Consulta
-                                </th>
+                                <th>Consulta</th>
 
-                                <th>
-                                    Estado
-                                </th>
+                                <th>Estado</th>
 
                             </tr>
 
@@ -299,6 +322,8 @@
 
     </div>
 
+    <!-- Protección de acceso -->
+
     <script>
 
         if(
@@ -312,6 +337,8 @@
         }
 
     </script>
+
+    <!-- Scripts -->
 
     <script src="js/admin.js"></script>
 

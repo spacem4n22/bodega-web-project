@@ -1,10 +1,11 @@
-const container =
-    document.getElementById("productos-container");
+// Contenedores principales
 
-const searchInput =
-    document.getElementById("searchInput");
+const container = document.getElementById("productos-container");
+const searchInput = document.getElementById("searchInput");
 
 let productos = [];
+
+// Cargar productos
 
 fetch("/api/productos")
 
@@ -19,12 +20,10 @@ fetch("/api/productos")
 })
 
 .catch(error => {
-
     console.log("Error:", error);
-
 });
 
-/* NORMALIZAR TEXTO */
+// Normalizar texto
 
 function normalizar(texto){
 
@@ -32,9 +31,10 @@ function normalizar(texto){
         .toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
+
 }
 
-/* MOSTRAR PRODUCTOS */
+// Mostrar productos
 
 function mostrarProductos(lista){
 
@@ -43,105 +43,103 @@ function mostrarProductos(lista){
     lista.forEach(producto => {
 
         if(!categorias[producto.categoria]){
-
             categorias[producto.categoria] = [];
         }
 
-        categorias[producto.categoria]
-            .push(producto);
+        categorias[producto.categoria].push(producto);
+
     });
 
     let html = "";
 
     for(const categoria in categorias){
 
-        const categoriaId =
-            normalizar(categoria);
+        const categoriaId = normalizar(categoria);
 
         html += `
+            <div
+                class="category-block"
+                id="${categoriaId}"
+            >
 
-        <div
-            class="category-block"
-            id="${categoriaId}"
-        >
+                <h2 class="category-title">
+                    ${categoria}
+                </h2>
 
-            <h2 class="category-title">
-                ${categoria}
-            </h2>
-
-            <div class="row g-4">
-
+                <div class="row g-4">
         `;
 
         categorias[categoria].forEach(producto => {
 
             html += `
+                <div class="col-lg-2 col-md-3 col-6">
 
-            <div class="col-lg-2 col-md-3 col-6">
+                    <div class="product-card">
 
-                <div class="product-card">
+                        <img
+                            src="${producto.imagen}"
+                            class="product-image"
+                            alt="${producto.nombre}"
+                        >
 
-                    <img
-                        src="${producto.imagen}"
-                        class="product-image"
-                        alt="${producto.nombre}"
-                    >
+                        <div class="product-content">
 
-                    <div class="product-content">
+                            <h6 class="product-name">
+                                ${producto.nombre}
+                            </h6>
 
-                        <h6 class="product-name">
-                            ${producto.nombre}
-                        </h6>
+                            <p class="product-price">
+                                ${producto.precio}
+                            </p>
 
-                        <p class="product-price">
-                            ${producto.precio}
-                        </p>
+                        </div>
 
                     </div>
 
                 </div>
-
-            </div>
-
             `;
+
         });
 
         html += `
+                </div>
             </div>
-        </div>
         `;
+
     }
 
     container.innerHTML = html;
 
-/* SCROLL A CATEGORIA */
+    // Scroll automático a categoría
 
-const hash = window.location.hash;
+    const hash = window.location.hash;
 
-if(hash){
+    if(hash){
 
-    const elemento =
-        document.querySelector(hash);
+        const elemento = document.querySelector(hash);
 
-    if(elemento){
+        if(elemento){
 
-        elemento.scrollIntoView({
-            behavior:"smooth"
-        });
+            elemento.scrollIntoView({
+                behavior:"smooth"
+            });
+
+        }
+
     }
-}
+
 }
 
-/* BUSCADOR */
+// Buscador
 
 searchInput.addEventListener("input", () => {
 
-    const texto =
-        normalizar(searchInput.value);
+    const texto = normalizar(searchInput.value);
 
     const filtrados = productos.filter(producto => {
 
         return (
+
             normalizar(producto.nombre)
                 .includes(texto)
 
@@ -149,6 +147,7 @@ searchInput.addEventListener("input", () => {
 
             normalizar(producto.categoria)
                 .includes(texto)
+
         );
 
     });

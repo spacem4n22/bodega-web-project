@@ -1,10 +1,9 @@
+// Inicio de sesión
+
 const form = document.getElementById("loginAdminForm");
 
-const usuarioInput =
-    document.getElementById("usuario");
-
-const passwordInput =
-    document.getElementById("password");
+const usuarioInput = document.getElementById("usuario");
+const passwordInput = document.getElementById("password");
 
 form.addEventListener("submit", (e) => {
 
@@ -19,11 +18,8 @@ form.addEventListener("submit", (e) => {
         const usuarioValido = usuarios.find(user => {
 
             return (
-
                 user.usuario === usuarioInput.value &&
-
                 user.password === passwordInput.value
-
             );
 
         });
@@ -34,11 +30,10 @@ form.addEventListener("submit", (e) => {
 
             localStorage.setItem("adminLogin", "true");
 
-            window.location.href =
-                "admin.html";
+            window.location.href = "admin.html";
 
-        }
-
+        } 
+        
         else{
 
             alert("Usuario o contraseña incorrectos");
@@ -48,9 +43,7 @@ form.addEventListener("submit", (e) => {
     })
 
     .catch(error => {
-
         console.log(error);
-
     });
 
 });
