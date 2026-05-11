@@ -1,33 +1,80 @@
-const productForm = document.getElementById("productForm");
-const tablaProductos = document.getElementById("tablaProductos");
-let contador = 1;
+const productoForm =
+    document.getElementById("productoForm");
 
-productForm.addEventListener("submit", (e) => {
+const productosAgregados =
+    document.getElementById("productosAgregados");
+
+productoForm.addEventListener("submit", (e) => {
+
     e.preventDefault();
 
-    const nombre = document.getElementById("nombre").value;
-    const precio = document.getElementById("precio").value;
-    const categoria = document.getElementById("categoria").value;
+    const nombre =
+        document.getElementById("nombreProducto").value;
 
-    const fila = document.createElement("tr");
-    fila.innerHTML = `
-        <td>${contador}</td>
-        <td>${nombre}</td>
-        <td>S/ ${precio}</td>
-        <td>${categoria}</td>
-        <td class="text-end">
-            <button class="action-btn">
-                <i class="bi bi-pencil"></i> Editar
+    const categoria =
+        document.getElementById("categoriaProducto").value;
+
+    const precio =
+        document.getElementById("precioProducto").value;
+
+    const imagen =
+        document.getElementById("imagenProducto").value;
+
+    const productoHTML = `
+
+        <div class="producto-item">
+
+            <div>
+
+                <strong>${nombre}</strong>
+
+                <p>
+                    ${categoria} - ${precio}
+                </p>
+
+            </div>
+
+            <button class="delete-btn">
+
+                Eliminar
+
             </button>
-            <button class="eliminar">
-                <i class="bi bi-trash"></i> Eliminar
-            </button>
-        </td>
+
+        </div>
+
     `;
 
-    tablaProductos.appendChild(fila);
-    contador++;
-    productForm.reset();
+    productosAgregados.innerHTML += productoHTML;
 
-    fila.querySelector(".eliminar").addEventListener("click", () => fila.remove());
+    const deleteButtons =
+    document.querySelectorAll(".delete-btn");
+
+deleteButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        button.parentElement.remove();
+
+    });
+
+});
+
+    alert("Producto agregado correctamente");
+
+    productoForm.reset();
+
+});
+
+const logoutBtn =
+    document.getElementById("logoutBtn");
+
+logoutBtn.addEventListener("click", () => {
+
+    localStorage.removeItem(
+        "adminLogin"
+    );
+
+    window.location.href =
+        "login_admin.html";
+
 });

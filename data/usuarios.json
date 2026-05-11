@@ -1,6 +1,6 @@
 [
     {
-        "usuario": "Admin",
-        "constraseña": "1234"
+        "usuario": "admin",
+        "password": "admin123"
     }
 ]

@@ -43,8 +43,8 @@
   },
   {
     "id":8,
-    "nombre":"Delivery",
-    "imagen":"imagenes/delivery.png",
-    "clase":"delivery-card"
+    "nombre":"Dulces",
+    "imagen":"imagenes/dulces.webp",
+    "clase":"dulces-card"
   }
 ]

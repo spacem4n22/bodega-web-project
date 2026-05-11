@@ -1,178 +1,192 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    min-height: 100vh;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #e8d9bf 0%, #f5ead4 50%, #f9e6d0 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: #3a2e1f;
+body{
+    min-height:100vh;
+    font-family:'Montserrat',sans-serif;
+    background:linear-gradient(
+        135deg,
+        #e8d9bf 0%,
+        #f5ead4 50%,
+        #f9e6d0 100%
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    color:#3a2e1f;
 }
 
-/* BOTON REGRESAR (esquina superior izquierda) */
-.regresa {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
+/* BOTON REGRESAR */
+
+.regresa{
+    position:fixed;
+    top:20px;
+    left:20px;
+    z-index:1000;
 }
 
-.regresa button {
-    padding: 10px 18px;
-    background-color: #ffffff;
-    color: #3a2e1f;
-    font-weight: 600;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
+.regresa button{
+    padding:10px 18px;
+    background-color:#ffffff;
+    color:#3a2e1f;
+    font-weight:600;
+    border:1px solid rgba(0,0,0,0.08);
+    border-radius:30px;
+    cursor:pointer;
+    font-size:0.95rem;
+    box-shadow:0 4px 10px rgba(0,0,0,0.06);
+    transition:0.3s;
 }
 
-.regresa button:hover {
-    background-color: #f5ead4;
-    transform: translateX(-3px);
+.regresa button:hover{
+    background-color:#f5ead4;
+    transform:translateX(-3px);
 }
 
-/* TARJETA PRINCIPAL */
-.login-card {
-    background: #ffffff;
-    border-radius: 24px;
-    padding: 45px 40px;
-    width: 100%;
-    max-width: 420px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+/* TARJETA LOGIN */
+
+.login-card{
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+    border-radius:24px;
+    padding:45px 40px;
+    width:100%;
+    max-width:420px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+    border:1px solid rgba(0,0,0,0.04);
+    transition:none;
 }
 
-.login-card .badge {
-    display: inline-block;
-    background: #fce8d4;
-    color: #9c5a2a;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 5px 14px;
-    border-radius: 20px;
-    margin-bottom: 18px;
+.login-card .badge{
+    display:inline-block;
+    background:#fce8d4;
+    color:#9c5a2a;
+    font-size:0.8rem;
+    font-weight:600;
+    padding:5px 14px;
+    border-radius:20px;
+    margin-bottom:18px;
 }
 
-.login-card h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #2b1f10;
-    margin-bottom: 8px;
+.login-card h1{
+    font-size:2rem;
+    font-weight:800;
+    color:#2b1f10;
+    margin-bottom:8px;
 }
 
-.login-card .subtitle {
-    color: #7a6a55;
-    font-size: 0.95rem;
-    margin-bottom: 30px;
+.login-card .subtitle{
+    color:#7a6a55;
+    font-size:0.95rem;
+    margin-bottom:30px;
 }
 
 /* CAMPOS */
-.form-group {
-    margin-bottom: 18px;
+
+.form-group{
+    margin-bottom:18px;
 }
 
-.form-group label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #3a2e1f;
-    margin-bottom: 8px;
+.form-group label{
+    display:block;
+    font-size:0.9rem;
+    font-weight:600;
+    color:#3a2e1f;
+    margin-bottom:8px;
 }
 
-.form-group input {
-    width: 100%;
-    padding: 13px 16px;
-    border: 1.5px solid #ece2d0;
-    border-radius: 12px;
-    font-size: 1rem;
-    background: #fdfaf3;
-    transition: all 0.2s ease;
-    outline: none;
+.form-group input{
+    width:100%;
+    padding:13px 16px;
+    border:1.5px solid #ece2d0;
+    border-radius:12px;
+    font-size:1rem;
+    background:#fdfaf3;
+    transition:0.3s;
+    outline:none;
 }
 
-.form-group input:focus {
-    border-color: #4a8c5f;
-    background: #ffffff;
-    box-shadow: 0 0 0 4px rgba(74, 140, 95, 0.12);
+.form-group input:focus{
+    border-color:#4a8c5f;
+    background:#ffffff;
+    box-shadow:0 0 0 4px rgba(74,140,95,0.12);
 }
 
 /* BOTON INGRESAR */
-.btn-ingresar {
-    width: 100%;
-    padding: 14px;
-    background: #3f7a52;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 700;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 14px rgba(63, 122, 82, 0.25);
+
+.btn-ingresar{
+    width:100%;
+    padding:14px;
+    background:#3f7a52;
+    color:#ffffff;
+    font-size:1rem;
+    font-weight:700;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    margin-top:10px;
+    transition:0.3s;
+    box-shadow:0 6px 14px rgba(63,122,82,0.25);
 }
 
-.btn-ingresar:hover {
-    background: #346643;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(63, 122, 82, 0.35);
+.btn-ingresar:hover{
+    background:#346643;
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(63,122,82,0.35);
 }
 
-/* DECORACION PASTEL */
-.deco {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.55;
-    z-index: -1;
+/* DECORACION */
+
+.deco{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(60px);
+    opacity:0.55;
+    z-index:-1;
 }
 
-.deco-1 {
-    width: 280px;
-    height: 280px;
-    background: #c8e0cf;
-    top: -80px;
-    right: -80px;
+.deco-1{
+    width:280px;
+    height:280px;
+    background:#c8e0cf;
+    top:-80px;
+    right:-80px;
 }
 
-.deco-2 {
-    width: 260px;
-    height: 260px;
-    background: #f5cdb0;
-    bottom: -80px;
-    left: -80px;
+.deco-2{
+    width:260px;
+    height:260px;
+    background:#f5cdb0;
+    bottom:-80px;
+    left:-80px;
 }
 
-.deco-3 {
-    width: 200px;
-    height: 200px;
-    background: #e0d4f0;
-    bottom: 30%;
-    right: 10%;
+.deco-3{
+    width:200px;
+    height:200px;
+    background:#e0d4f0;
+    bottom:30%;
+    right:10%;
 }
 
 /* RESPONSIVE */
-@media (max-width: 576px) {
-    .login-card {
-        padding: 35px 25px;
+
+@media(max-width:576px){
+
+    .login-card{
+        padding:35px 25px;
     }
 
-    .login-card h1 {
-        font-size: 1.6rem;
+    .login-card h1{
+        font-size:1.6rem;
     }
 
-    .regresa button {
-        padding: 8px 14px;
-        font-size: 0.85rem;
+    .regresa button{
+        padding:8px 14px;
+        font-size:0.85rem;
     }
 }

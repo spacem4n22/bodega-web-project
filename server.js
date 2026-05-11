@@ -38,3 +38,7 @@ app.get("/api/categorias", (req, res) => {
 app.get("/api/productos", (req, res) => {
     res.json(leer(productosFile));
 });
+
+app.get("/api/usuarios", (req, res) => {
+    res.json(leer(usuariosFile));
+});

@@ -2,92 +2,319 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Admin · Bodega Chelita</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel Administrador</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="CSS/admin.css">
+
 </head>
 
 <body>
+
     <div class="admin-container">
 
         <!-- SIDEBAR -->
         <aside class="sidebar">
-            <div class="sidebar-top">
-                <div class="brand">
-                    <span class="brand-icon"><i class="bi bi-shop"></i></span>
-                    <div>
-                        <h2 class="logo">Bodega Chelita</h2>
-                        <p class="admin-text">Administrador</p>
-                    </div>
-                </div>
-            </div>
 
-            <button class="btn logout-btn" onclick="window.location.href='index.html'">
-                <i class="bi bi-box-arrow-right"></i> Cerrar sesión
-            </button>
+            <h2 class="logo">
+                Chelita Admin
+            </h2>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="#productos-section">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#consultas-section">
+                        Consultas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#estadisticas-section">
+                        Estadísticas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html" id="logoutBtn">
+                        Cerrar sesión
+                    </a>
+                </li>
+
+            </ul>
+
         </aside>
 
-        <!-- MAIN -->
-        <main class="main-content">
-            <header class="page-header">
-                <h1 class="dashboard-title">Panel de agregración de productos</h1>
-                <p class="dashboard-subtitle">Ingrese nuevos productos a su bodega.</p>
+        <!-- CONTENIDO -->
+        <main class="dashboard-content">
+
+            <!-- HEADER -->
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        Panel Administrativo
+                    </h1>
+
+                    <p>
+                        Gestiona productos y revisa consultas.
+                    </p>
+
+                </div>
+
             </header>
 
-            <!-- FORMULARIO -->
-            <div class="admin-card">
-                <h3>Registrar producto</h3>
+            <!-- ESTADISTICAS -->
+            <section class="stats-section" id="estadisticas-section">
 
-                <form id="productForm">
-                    <div class="row g-3">
-                        <div class="col-12 col-md-6">
-                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <input type="number" class="form-control" id="precio" placeholder="Precio" required>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <input type="text" class="form-control" id="imagen" placeholder="URL Imagen">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <input type="text" class="form-control" id="categoria" placeholder="Categoría">
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-save">
-                                <i class="bi bi-plus-lg"></i> Guardar producto
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+                <div class="stat-card">
 
-            <!-- TABLA -->
-            <div class="admin-card">
-                <h3>Lista de productos</h3>
+                    <h3>
+                        22
+                    </h3>
 
-                <div class="table-responsive">
-                    <table class="table align-middle">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Precio</th>
-                                <th>Categoría</th>
-                                <th class="text-end">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tablaProductos"></tbody>
-                    </table>
+                    <p>
+                        Productos registrados
+                    </p>
+
                 </div>
-            </div>
+
+                <div class="stat-card">
+
+                    <h3>
+                        8
+                    </h3>
+
+                    <p>
+                        Categorías activas
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>
+                        14
+                    </h3>
+
+                    <p>
+                        Consultas recibidas
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- AGREGAR PRODUCTO -->
+            <section class="dashboard-card" id="productos-section">
+
+                <h2>
+                    Agregar Producto
+                </h2>
+
+                <form id="productoForm" class="product-form">
+
+                    <input
+                        type="text"
+                        id="nombreProducto"
+                        placeholder="Nombre del producto"
+                        required
+                    >
+
+                    <select id="categoriaProducto" required>
+
+                        <option value="">
+                            Selecciona categoría
+                        </option>
+
+                        <option value="Gaseosas">
+                            Gaseosas
+                        </option>
+
+                        <option value="Snacks">
+                            Snacks
+                        </option>
+
+                        <option value="Lácteos">
+                            Lácteos
+                        </option>
+
+                        <option value="Limpieza">
+                            Limpieza
+                        </option>
+
+                        <option value="Abarrotes">
+                            Abarrotes
+                        </option>
+
+                        <option value="Conservas">
+                            Conservas
+                        </option>
+
+                        <option value="Licores">
+                            Licores
+                        </option>
+
+                        <option value="Dulces">
+                            Dulces
+                        </option>
+
+                    </select>
+
+                    <input
+                        type="text"
+                        id="precioProducto"
+                        placeholder="Precio"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="imagenProducto"
+                        placeholder="Ruta de imagen"
+                        required
+                    >
+
+                    <button type="submit">
+                        Agregar producto
+                    </button>
+
+                </form>
+
+                <div id="productosAgregados" class="productos-lista">
+                </div>
+
+            </section>
+
+            <!-- CONSULTAS -->
+            <section class="dashboard-card" id="consultas-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Consultas Recibidas
+                    </h2>
+
+                    <button class="refresh-btn">
+                        Actualizar
+                    </button>
+
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Cliente
+                                </th>
+
+                                <th>
+                                    Celular
+                                </th>
+
+                                <th>
+                                    Consulta
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    María López
+                                </td>
+
+                                <td>
+                                    987654321
+                                </td>
+
+                                <td>
+                                    Consulta sobre delivery cercano
+                                </td>
+
+                                <td>
+                                    Pendiente
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    Carlos Ruiz
+                                </td>
+
+                                <td>
+                                    945332211
+                                </td>
+
+                                <td>
+                                    Consulta sobre promociones
+                                </td>
+
+                                <td>
+                                    Respondido
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
         </main>
+
     </div>
 
-    <script src="JS/admin.js"></script>
+    <script>
+
+        if(
+            localStorage.getItem("adminLogin")
+            !== "true"
+        ){
+
+            window.location.href =
+                "login_admin.html";
+
+        }
+
+    </script>
+
+    <script src="js/admin.js"></script>
+
 </body>
 
 </html>
